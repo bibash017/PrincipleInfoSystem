@@ -52,3 +52,47 @@ img {
   color: #FFFFFF;
 }
 /*----*/
+/*Headers*/
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 40px;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #ECE8DE;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 700;
+  color: #2F7A4F;
+}
+
+.logo-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: #2F7A4F;
+  color: #FFFFFF;
+  font-size: 17px;
+}
+
+.main-nav a {
+  margin: 0 16px;
+  font-weight: 500;
+}
+
+.main-nav a:hover {
+  color: #2F7A4F;
+}
+
+.header-buttons .button {
+  margin-left: 12px;
+  padding: 8px 20px;
+}
