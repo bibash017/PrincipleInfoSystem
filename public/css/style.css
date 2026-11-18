@@ -21,3 +21,34 @@ img {
   display: block;
   max-width: 100%;
 }
+
+/*Buttons */
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.button-primary {
+  background-color: #2F7A4F;
+  color: #FFFFFF;
+}
+
+.button-outline {
+  background-color: #FFFFFF;
+  border-color: #2F7A4F;
+  color: #2F7A4F;
+}
+
+.button-light {
+  background-color: #FFFFFF;
+  color: #2F7A4F;
+}
+
+.button-outline-light {
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+}
+/*----*/
