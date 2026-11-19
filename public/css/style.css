@@ -96,3 +96,42 @@ img {
   margin-left: 12px;
   padding: 8px 20px;
 }
+/* Hero banner*/
+.hero {
+  display: flex;
+  align-items: center;
+  margin: 28px 40px;
+  padding: 48px;
+  border-radius: 16px;
+  background-color: #2F7A4F;
+  color: #FFFFFF;
+}
+
+.hero-text {
+  width: 50%;
+  padding-right: 40px;
+}
+
+.hero h1 {
+  margin-bottom: 20px;
+  font-size: 44px;
+  line-height: 1.2;
+}
+
+.hero-text p {
+  margin-bottom: 32px;
+  font-size: 18px;
+  color: #D6EADD;
+}
+
+.hero-buttons .button {
+  margin-right: 16px;
+}
+
+.hero-image {
+  width: 50%;
+  height: 356px;
+  object-fit: cover;
+  border-radius: 12px;
+  background-color: #BFDDB0;
+}
