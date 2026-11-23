@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log In | FoodBridge</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-page">
+
+  <div class="auth-layout">
+
+    <!-- LEFT: green panel (same as the sign up page) -->
+    <section class="brand-panel">
+      <a href="index.html" class="brand-logo">
+        <img src="images/Food Bridge-logo.png" alt="FoodBridge logo">
+        FoodBridge
+      </a>
+      <img src="images/signup.png" alt="Donated food packed on a table" class="brand-image">
+      <h2>Every listing is a meal saved.</h2>
+      <p>Join local organizations already rescuing food in Winnipeg.</p>
+    </section>
+
+    <!-- RIGHT: log in form. No account type here: the database already knows it. -->
+    <main class="form-side">
+      <h1>Welcome back</h1>
+      <p class="form-subtitle">Log in with your business or organization email.</p>
+
+      <form action="/login" method="POST">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" class="field" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" class="field" required>
+
+        <p id="form-message" class="form-message"></p>
+
+        <button type="submit" class="btn btn-primary btn-form">Log In</button>
+      </form>
+
+      <p class="switch-link">Don't have an account? <a href="signup.html">Sign up</a></p>
+    </main>
+
+  </div>
+
+  <script src="js/auth.js"></script>
+</body>
+</html>

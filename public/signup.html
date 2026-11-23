@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up | FoodBridge</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-page">
+
+  <div class="auth-layout">
+
+    <!-- LEFT: green panel (same on the log in page) -->
+    <section class="brand-panel">
+      <a href="index.html" class="brand-logo">
+        <img src="images/Food Bridge-logo.png" alt="FoodBridge logo">
+        FoodBridge
+      </a>
+      <img src="images/signup.png" alt="Donated food packed on a table" class="brand-image">
+      <h2>Every listing is a meal saved.</h2>
+      <p>Join local organizations already rescuing food in Winnipeg.</p>
+    </section>
+
+    <!-- RIGHT: sign up form -->
+    <main class="form-side">
+      <h1>Create your account</h1>
+      <p class="form-subtitle">Choose how you will use FoodBridge.</p>
+
+      <!-- method="POST" sends the form to server.js at the address /signup -->
+      <form action="/signup" method="POST">
+
+        <!-- "for" matches the input's id, "name" is what the server receives -->
+        <label for="role">Account type</label>
+        <select id="role" name="role" class="field" required>
+          <option value="donor">Donor</option>
+          <option value="recipient">Recipient organization</option>
+          <option value="volunteer">Volunteer</option>
+        </select>
+
+        <label for="full-name">Full name</label>
+        <input type="text" id="full-name" name="fullName" class="field" required>
+
+        <label for="org-name">Business / organization name</label>
+        <input type="text" id="org-name" name="orgName" class="field" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" class="field" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" class="field" required>
+
+        <!-- auth.js writes error messages here -->
+        <p id="form-message" class="form-message"></p>
+
+        <button type="submit" class="btn btn-primary btn-form">Create Account</button>
+      </form>
+
+      <p class="switch-link">Already have an account? <a href="login.html">Log in</a></p>
+    </main>
+
+  </div>
+
+  <script src="js/auth.js"></script>
+</body>
+</html>
