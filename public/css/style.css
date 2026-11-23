@@ -181,3 +181,107 @@ img {
   border-radius: 12px;
   background-color: #BFDDB0;   
 }
+/* 5. Stat Cards */
+
+.stats {
+  display: flex;
+  margin: 28px 40px 0 40px;
+}
+
+.stat-card {
+  flex: 1;
+  height: 110px;
+  margin-right: 24px;
+  padding: 20px 22px;
+  background-color: #FFFFFF;
+  border: 1px solid #E2DDD0;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(31, 43, 36, 0.07);
+}
+
+/* the last card does not need a gap on its right */
+.stat-card:last-child {
+  margin-right: 0;
+}
+
+.stat-label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #5F6B64;
+}
+
+.stat-number {
+  margin-top: 5px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #2F7A4F;
+}
+
+/* 6. How it works */
+
+.how-it-works {
+  margin: 32px 40px 36px 40px;
+}
+
+.how-it-works h2 {
+  margin-bottom: 13px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.steps {
+  display: flex;
+}
+
+/* Each card is also a flex row: number circle on the left, text on the right */
+.step-card {
+  flex: 1;
+  display: flex;
+  height: 132px;
+  margin-right: 26px;
+  padding: 22px;
+  background-color: #FFFFFF;
+  border: 1px solid #E2DDD0;
+  border-radius: 12px;
+}
+
+.step-card:last-child {
+  margin-right: 0;
+}
+
+/* line-height equal to the height centres the number vertically */
+.step-number {
+  flex-shrink: 0;              
+  width: 40px;
+  height: 40px;
+  margin-right: 16px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #E2F0E7;
+  color: #2F7A4F;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.step-card h3 {
+  margin-top: 2px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.step-card p {
+  margin-top: 7px;
+  font-size: 16px;
+  color: #5F6B64;
+}
+
+/*  7. FOOTER */
+
+.site-footer {
+  padding: 20px 40px;
+  border-top: 1px solid #ECE8DE;
+  text-align: center;
+  font-size: 14px;
+  color: #5F6B64;
+}
