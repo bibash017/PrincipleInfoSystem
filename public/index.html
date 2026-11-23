@@ -3,42 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FoodBridge</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>FoodBridge | Rescue Surplus Food</title>
+
+  <!-- Inter font from Google Fonts (the font used in our Figma design) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+
+  <!-- css file-->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-      <header class="site-header">
+
+  <!-- HEADER: logo, menu and account buttons -->
+  <header class="site-header">
+
+    <!-- Logo: clicking it always takes you back to the home page -->
     <a href="index.html" class="logo">
-      <span class="logo-mark"></span>
+      <img src="images/logo.png" alt="FoodBridge logo">
       FoodBridge
     </a>
 
+    <!-- Main menu. -->
     <nav class="main-nav">
-      <a href="find-food.html">Find Food</a>
-      <a href="signup.html">Donate Food</a>
-      <a href="about.html">About</a>
+      <ul>
+        <li><a href="find-food.html">Find Food</a></li>
+        <li><a href="signup.html">Donate Food</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="admin.html">Admin</a></li>
+      </ul>
     </nav>
 
+    <!-- Log in / sign up buttons -->
     <div class="header-buttons">
-      <a href="login.html" class="button button-outline">Log In</a>
-      <a href="signup.html" class="button button-primary">Sign Up</a>
+      <a href="login.html" class="btn btn-outline">Log In</a>
+      <a href="signup.html" class="btn btn-primary">Sign Up</a>
     </div>
-  </header>
-    <main>
 
-    <section class="hero">
-      <div class="hero-text">
-        <h1>Rescue surplus food.<br>Feed your community.</h1>
-        <p>FoodBridge connects restaurants, grocers and bakeries with local food banks, shelters and volunteers before good food goes to waste.</p>
-        <div class="hero-buttons">
-          <a href="find-food.html" class="button button-light">Find Food</a>
-          <a href="signup.html" class="button button-outline-light">Donate Food</a>
-        </div>
-      </div>
-      <img src="images/" alt="Volunteers packing boxes of donated food" class="hero-image">
-    </section>
+  </header>
+
+  <main>
 
   </main>
+
 </body>
 </html>
