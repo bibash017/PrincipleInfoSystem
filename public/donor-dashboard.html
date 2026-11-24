@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donor Dashboard | FoodBridge</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="dashboard-layout">
+
+    <!-- LEFT: green sidebar menu -->
+    <nav class="sidebar">
+      <a href="index.html" class="sidebar-logo">
+        <img src="images/Food Bridge-logo.png" alt="FoodBridge logo">
+        FoodBridge
+      </a>
+
+      <!-- main menu: class="active" marks the page we are on -->
+      <ul class="sidebar-menu">
+        <li><a href="donor-dashboard.html" class="active">Dashboard</a></li>
+        <li><a href="create-donation.html">Create Donation</a></li>
+        <li><a href="my-listings.html">My Listings</a></li>
+        <li><a href="notifications.html">Notifications</a></li>
+        <li><a href="impact-report.html">Impact Report</a></li>
+      </ul>
+
+      <!-- bottom menu, pushed down to the bottom of the sidebar -->
+      <ul class="sidebar-menu sidebar-bottom">
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="settings.html">Settings</a></li>
+        <li><a href="index.html">Log Out</a></li>
+      </ul>
+    </nav>
+
+    <!-- RIGHT: page content -->
+    <div class="dashboard-main">
+
+      <!-- white bar at the top -->
+      <header class="top-bar">
+        <h1>Donor Dashboard</h1>
+        <p class="top-bar-name">MercedesBenz Bakery</p>
+      </header>
+
+      <main class="dashboard-content">
+
+        <!-- greeting + New Donation button -->
+        <section class="welcome">
+          <div>
+            <h2>Good afternoon, MercedesBenz Bakery</h2>
+            <p>Here is what is happening with your donations.</p>
+          </div>
+          <!-- &plus; shows the + sign -->
+          <a href="create-donation.html" class="btn btn-primary btn-new">&plus;&nbsp; New Donation</a>
+        </section>
+
+        <!-- four number cards (same classes as the Home page) -->
+        <section class="stats">
+          <div class="stat-card">
+            <p class="stat-label">Total donations</p>
+            <p class="stat-number">6</p>
+          </div>
+          <div class="stat-card">
+            <p class="stat-label">Food rescued</p>
+            <p class="stat-number">312 kg</p>
+          </div>
+          <div class="stat-card">
+            <p class="stat-label">Estimated meals</p>
+            <p class="stat-number">780</p>
+          </div>
+          <div class="stat-card">
+            <p class="stat-label">Active listings</p>
+            <p class="stat-number orange">2</p>
+          </div>
+        </section>
+
+        <!-- table of recent donations -->
+        <section class="table-card">
+          <h2>Recent donations</h2>
+
+          <!-- this box lets the table scroll sideways on small phones -->
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>Food item</th>
+                  <th>Claimed by</th>
+                  <th>Quantity</th>
+                  <th>Pickup window</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- &amp; shows the & sign -->
+                <tr>
+                  <td class="food-name">Day-old bread &amp; rolls</td>
+                  <td>Harvest Community Pantry</td>
+                  <td>15 kg</td>
+                  <td>Today, 4–6 PM</td>
+                  <td><span class="badge claimed">Claimed</span></td>
+                  <td><button type="button" class="table-btn">View</button></td>
+                </tr>
+                <tr>
+                  <td class="food-name">Croissants &amp; muffins</td>
+                  <td>Not claimed yet</td>
+                  <td>6 kg</td>
+                  <td>Today, 5–7 PM</td>
+                  <td><span class="badge available">Available</span></td>
+                  <td><button type="button" class="table-btn">Edit</button></td>
+                </tr>
+                <tr>
+                  <td class="food-name">Sandwich trays</td>
+                  <td>Riverbend Shelter</td>
+                  <td>8 kg</td>
+                  <td>Oct 19, 2–4 PM</td>
+                  <td><span class="badge picked-up">Picked up</span></td>
+                  <td><button type="button" class="table-btn">View</button></td>
+                </tr>
+                <tr>
+                  <td class="food-name">Assorted bagels</td>
+                  <td>Main Street Shelter</td>
+                  <td>12 kg</td>
+                  <td>Oct 18, 3–5 PM</td>
+                  <td><span class="badge completed">Completed</span></td>
+                  <td><button type="button" class="table-btn">View</button></td>
+                </tr>
+                <tr>
+                  <td class="food-name">Cinnamon buns</td>
+                  <td>Not claimed</td>
+                  <td>4 kg</td>
+                  <td>Oct 17, 1–3 PM</td>
+                  <td><span class="badge expired">Expired</span></td>
+                  <td><button type="button" class="table-btn">Repost</button></td>
+                </tr>
+                <tr>
+                  <td class="food-name">Sourdough loaves</td>
+                  <td>Northside Fridge</td>
+                  <td>10 kg</td>
+                  <td>Oct 16, 2–5 PM</td>
+                  <td><span class="badge completed">Completed</span></td>
+                  <td><button type="button" class="table-btn">View</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+</body>
+</html>
