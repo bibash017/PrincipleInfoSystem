@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="css/style.css">
 </head>
+<script src="js/create-donation.js"></script>
 <body>
 
   <div class="dashboard-layout">
@@ -48,7 +49,7 @@
           <p>Provide details about the food you want to donate.</p>
 
           <!-- sends the form to server.js at /donate, which saves it and goes back to the dashboard -->
-          <form action="/donate" method="POST">
+          <form id="donation-form">
             <label for="food-item">Food item</label>
             <input type="text" id="food-item" name="foodItem" class="field" placeholder="e.g. Day-old bread &amp; rolls" required>
 
