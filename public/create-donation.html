@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Donation | FoodBridge</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="dashboard-layout">
+
+    <!-- LEFT: same sidebar as the dashboard, but "Create Donation" is active -->
+    <nav class="sidebar">
+      <a href="index.html" class="sidebar-logo">
+        <!-- <img src="images/Food Bridge-logo.png" alt="FoodBridge logo"> -->
+        FoodBridge
+      </a>
+
+      <ul class="sidebar-menu">
+        <li><a href="donor-dashboard.html">Dashboard</a></li>
+        <li><a href="create-donation.html" class="active">Create Donation</a></li>
+        <li><a href="my-listings.html">My Listings</a></li>
+        <li><a href="notifications.html">Notifications</a></li>
+        <li><a href="impact-report.html">Impact Report</a></li>
+      </ul>
+
+      <ul class="sidebar-menu sidebar-bottom">
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="settings.html">Settings</a></li>
+        <li><a href="index.html">Log Out</a></li>
+      </ul>
+    </nav>
+
+    <!-- RIGHT: page content -->
+    <div class="dashboard-main">
+
+      <header class="top-bar">
+        <h1>Create Donation</h1>
+        <p class="top-bar-name">MercedesBenz Bakery</p>
+      </header>
+
+      <main class="dashboard-content">
+
+        <section class="form-card">
+          <h2>Create a food donation</h2>
+          <p>Provide details about the food you want to donate.</p>
+
+          <!-- sends the form to server.js at /donate, which saves it and goes back to the dashboard -->
+          <form action="/donate" method="POST">
+            <label for="food-item">Food item</label>
+            <input type="text" id="food-item" name="foodItem" class="field" placeholder="e.g. Day-old bread &amp; rolls" required>
+
+            <label for="quantity">Quantity</label>
+            <input type="text" id="quantity" name="quantity" class="field" placeholder="e.g. 15 kg" required>
+
+            <!-- datetime-local shows a date and time picker -->
+            <label for="pickup-by">Pickup by</label>
+            <input type="datetime-local" id="pickup-by" name="pickupBy" class="field" required>
+
+            <label for="address">Pickup address</label>
+            <input type="text" id="address" name="address" class="field" placeholder="e.g. 245 Osborne St, Winnipeg" required>
+
+            <button type="submit" class="btn btn-primary btn-form">Make Donation</button>
+          </form>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+</body>
+</html>

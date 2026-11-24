@@ -475,3 +475,622 @@ img {
     font-size: 28px;
   }
 }
+
+/* 10. DONOR DASHBOARD (sidebar layout, reused by later logged-in pages) */
+.dashboard-layout {
+  display: flex;               /* sidebar on the left, page on the right */
+  min-height: 100vh;
+}
+
+/* green sidebar */
+.sidebar {
+  display: flex;
+  flex-direction: column;      /* logo, menu and bottom menu stacked */
+  flex-shrink: 0;
+  width: 240px;
+  padding: 11px 12px 20px 12px;
+  background-color: #2F7A4F;
+  color: #E3EEE7;
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 26px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.sidebar-logo img {
+  width: 75px;
+  height: 75px;
+  margin-right: 6px;
+}
+
+.sidebar-menu {
+  list-style: none;
+}
+
+.sidebar-menu a {
+  display: block;              /* the whole 40px row is clickable */
+  height: 40px;
+  line-height: 40px;
+  margin-bottom: 8px;
+  padding-left: 16px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* the page we are on, and the row under the mouse */
+.sidebar-menu a.active,
+.sidebar-menu a:hover {
+  background-color: #2E5641;
+}
+
+/* margin-top: auto pushes this menu to the bottom of the sidebar */
+.sidebar-bottom {
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid #2E4A3B;
+}
+
+.sidebar-bottom a {
+  height: 36px;
+  line-height: 36px;
+}
+
+/* right side */
+.dashboard-main {
+  flex: 1;
+  background-color: #E8E8E8;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;   /* title left, name right */
+  height: 73px;
+  padding: 0 40px;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #ECE8DE;
+}
+
+.top-bar h1 {
+  font-size: 35px;
+}
+
+.top-bar-name {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.dashboard-content {
+  padding: 28px 40px 40px 40px;
+}
+
+.welcome {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.welcome h2 {
+  font-size: 26px;
+}
+
+.welcome p {
+  margin-top: 4px;
+  font-size: 18px;
+}
+
+.btn-new {
+  height: 50px;
+  line-height: 48px;
+}
+
+/* the stat cards reuse section 5, with a few changes for this page */
+.dashboard-content .stats {
+  margin: 31px 0 0 0;
+}
+
+.dashboard-content .stat-card {
+  background-color: #FFFFFF;
+}
+
+.dashboard-content .stat-label {
+  font-size: 20px;
+}
+
+.dashboard-content .stat-number {
+  font-size: 35px;
+}
+
+.orange {
+  color: #C8641F;
+}
+
+/* table card */
+.table-card {
+  margin-top: 28px;
+  background-color: #FFFFFF;
+  border: 1px solid #E2DDD0;
+}
+
+.table-card h2 {
+  padding: 20px 24px 14px 24px;
+  font-size: 25px;
+}
+
+.table-scroll {
+  overflow-x: auto;            /* scroll sideways if the screen is too narrow */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;   /* no gaps between the cell borders */
+  text-align: left;
+}
+
+th {
+  height: 44px;
+  padding: 0 24px;
+  background-color: #E8E8E8;
+  font-size: 16px;
+}
+
+td {
+  height: 68px;
+  padding: 0 24px;
+  border-bottom: 1px solid #ECE8DE;
+  font-size: 16px;
+  white-space: nowrap;         /* keep each cell on one line */
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.food-name {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* coloured status labels */
+.badge {
+  display: inline-block;
+  width: 93px;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.available  { background-color: #E2F0E7; color: #2B7148; }
+.claimed    { background-color: #E1EBF7; color: #2C5D96; }
+.picked-up  { background-color: #FCE9DA; color: #C8641F; }
+.completed  { background-color: #ECEAE4; color: #55605A; }
+.expired    { background-color: #FBE2DD; color: #B03A2A; }
+
+/* small View / Edit / Repost buttons */
+.table-btn {
+  width: 80px;
+  height: 32px;
+  border: 1px solid #E2DDD0;
+  background-color: #FFFFFF;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .dashboard-layout {
+    flex-direction: column;    /* sidebar becomes a bar on top */
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .sidebar-logo img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .sidebar-menu {
+    display: flex;
+    flex-wrap: wrap;           /* menu items side by side, wrapping */
+  }
+
+  .sidebar-menu a {
+    margin: 0 4px 4px 0;
+    padding: 0 12px;
+    font-size: 16px;
+  }
+
+  .sidebar-bottom {
+    margin-top: 8px;
+  }
+
+  .top-bar,
+  .dashboard-content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .top-bar h1 {
+    font-size: 24px;
+  }
+
+  .top-bar-name {
+    font-size: 16px;
+  }
+
+  .welcome {
+    flex-direction: column;    /* button goes under the greeting */
+  }
+
+  .welcome h2 {
+    font-size: 22px;
+  }
+
+  .btn-new {
+    margin-top: 16px;
+  }
+}
+
+/* 10. DONOR DASHBOARD (sidebar layout, reused by later logged-in pages) */
+.dashboard-layout {
+  display: flex;               /* sidebar on the left, page on the right */
+  min-height: 100vh;
+}
+
+/* green sidebar */
+.sidebar {
+  display: flex;
+  flex-direction: column;      /* logo, menu and bottom menu stacked */
+  flex-shrink: 0;
+  width: 240px;
+  padding: 11px 12px 20px 12px;
+  background-color: #2F7A4F;
+  color: #E3EEE7;
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 26px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.sidebar-logo img {
+  width: 75px;
+  height: 75px;
+  margin-right: 6px;
+}
+
+.sidebar-menu {
+  list-style: none;
+}
+
+.sidebar-menu a {
+  display: block;              /* the whole 40px row is clickable */
+  height: 40px;
+  line-height: 40px;
+  margin-bottom: 8px;
+  padding-left: 16px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* the page we are on, and the row under the mouse */
+.sidebar-menu a.active,
+.sidebar-menu a:hover {
+  background-color: #2E5641;
+}
+
+/* margin-top: auto pushes this menu to the bottom of the sidebar */
+.sidebar-bottom {
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid #2E4A3B;
+}
+
+.sidebar-bottom a {
+  height: 36px;
+  line-height: 36px;
+}
+
+/* right side */
+.dashboard-main {
+  flex: 1;
+  background-color: #E8E8E8;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;   /* title left, name right */
+  height: 73px;
+  padding: 0 40px;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #ECE8DE;
+}
+
+.top-bar h1 {
+  font-size: 35px;
+}
+
+.top-bar-name {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.dashboard-content {
+  padding: 28px 40px 40px 40px;
+}
+
+.welcome {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.welcome h2 {
+  font-size: 26px;
+}
+
+.welcome p {
+  margin-top: 4px;
+  font-size: 18px;
+}
+
+.btn-new {
+  height: 50px;
+  line-height: 48px;
+}
+
+/* the stat cards reuse section 5, with a few changes for this page */
+.dashboard-content .stats {
+  margin: 31px 0 0 0;
+}
+
+.dashboard-content .stat-card {
+  background-color: #FFFFFF;
+}
+
+.dashboard-content .stat-label {
+  font-size: 20px;
+}
+
+.dashboard-content .stat-number {
+  font-size: 35px;
+}
+
+.orange {
+  color: #C8641F;
+}
+
+/* table card */
+.table-card {
+  margin-top: 28px;
+  background-color: #FFFFFF;
+  border: 1px solid #E2DDD0;
+}
+
+.table-card h2 {
+  padding: 20px 24px 14px 24px;
+  font-size: 25px;
+}
+
+.table-scroll {
+  overflow-x: auto;            /* scroll sideways if the screen is too narrow */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;   /* no gaps between the cell borders */
+  text-align: left;
+}
+
+th {
+  height: 44px;
+  padding: 0 24px;
+  background-color: #E8E8E8;
+  font-size: 16px;
+}
+
+td {
+  height: 68px;
+  padding: 0 24px;
+  border-bottom: 1px solid #ECE8DE;
+  font-size: 16px;
+  white-space: nowrap;         /* keep each cell on one line */
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.food-name {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* coloured status labels */
+.badge {
+  display: inline-block;
+  width: 93px;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.available  { background-color: #E2F0E7; color: #2B7148; }
+.claimed    { background-color: #E1EBF7; color: #2C5D96; }
+.picked-up  { background-color: #FCE9DA; color: #C8641F; }
+.completed  { background-color: #ECEAE4; color: #55605A; }
+.expired    { background-color: #FBE2DD; color: #B03A2A; }
+
+/* small View / Edit / Repost buttons */
+.table-btn {
+  width: 80px;
+  height: 32px;
+  border: 1px solid #E2DDD0;
+  background-color: #FFFFFF;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .dashboard-layout {
+    flex-direction: column;    /* sidebar becomes a bar on top */
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .sidebar-logo img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .sidebar-menu {
+    display: flex;
+    flex-wrap: wrap;           /* menu items side by side, wrapping */
+  }
+
+  .sidebar-menu a {
+    margin: 0 4px 4px 0;
+    padding: 0 12px;
+    font-size: 16px;
+  }
+
+  .sidebar-bottom {
+    margin-top: 8px;
+  }
+
+  .top-bar,
+  .dashboard-content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .top-bar h1 {
+    font-size: 24px;
+  }
+
+  .top-bar-name {
+    font-size: 16px;
+  }
+
+  .welcome {
+    flex-direction: column;    /* button goes under the greeting */
+  }
+
+  .welcome h2 {
+    font-size: 22px;
+  }
+
+  .btn-new {
+    margin-top: 16px;
+  }
+}
+
+/* 12. FIND FOOD (uses the dashboard layout) */
+.page-title {
+  margin-bottom: 20px;
+  font-size: 35px;
+}
+
+.search-bar,
+.filters,
+.listing {
+  max-width: 700px;
+}
+
+.filters {
+  display: flex;               /* the 4 menus in one row */
+  margin-top: 14px;
+}
+
+.filters .field {
+  flex: 1;                     /* each menu gets the same width */
+  margin-right: 12px;
+}
+
+.filters .field:last-child {
+  margin-right: 0;
+}
+
+.listing {
+  margin-top: 16px;
+  padding: 18px 22px;
+  background-color: #FFFFFF;
+  border: 1px solid #E2DDD0;
+}
+
+.listing h3 {
+  font-size: 20px;
+}
+
+.listing p {
+  margin-top: 4px;
+  font-size: 16px;
+}
+
+@media (max-width: 900px) {
+  .page-title {
+    font-size: 26px;
+  }
+
+  .filters {
+    flex-wrap: wrap;           /* 2 menus per row */
+  }
+
+  .filters .field {
+    flex: 1 1 40%;
+    margin: 0 8px 8px 0;
+  }
+}
+/* 13. ABOUT PAGE */
+.about {
+  max-width: 800px;
+  margin: 40px;
+}
+
+.about h1 {
+  font-size: 35px;
+}
+
+.about h2 {
+  margin-top: 28px;
+  font-size: 22px;
+}
+
+.about p,
+.about li {
+  margin-top: 8px;
+  font-size: 18px;
+}
+
+.about ul {
+  margin-left: 24px;           /* room for the bullet points */
+}
+
+@media (max-width: 900px) {
+  .about {
+    margin: 24px 20px;
+  }
+
+  .about h1 {
+    font-size: 28px;
+  }
+}

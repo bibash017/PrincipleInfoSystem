@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Food | FoodBridge</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="dashboard-layout">
+
+    <!-- LEFT: sidebar with the recipient menu -->
+    <nav class="sidebar">
+      <a href="index.html" class="sidebar-logo">
+        <!-- <img src="images/Food Bridge-logo.png" alt="FoodBridge logo"> -->
+        FoodBridge
+      </a>
+
+      <ul class="sidebar-menu">
+        <li><a href="find-food.html" class="active">Find Food</a></li>
+        <li><a href="my-claims.html">My Claims</a></li>
+        <li><a href="map-view.html">Map View</a></li>
+        <li><a href="notifications.html">Notifications</a></li>
+      </ul>
+
+      <ul class="sidebar-menu sidebar-bottom">
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="settings.html">Settings</a></li>
+        <li><a href="index.html">Log Out</a></li>
+      </ul>
+    </nav>
+
+    <!-- RIGHT: page content -->
+    <div class="dashboard-main">
+
+      <header class="top-bar">
+        <h1>Find Food</h1>
+      </header>
+
+      <main class="dashboard-content">
+
+        <h2 class="page-title">Available food donations</h2>
+
+        <!-- search bar -->
+        <input type="search" class="field search-bar" placeholder="Search by food type, donor or neighbourhood" aria-label="Search">
+
+        <!-- 4 filters. aria-label names each menu for screen readers. -->
+        <div class="filters">
+          <select class="field" aria-label="Food type">
+            <option>Food type: All</option>
+            <option>Produce</option>
+            <option>Bakery</option>
+            <option>Prepared meals</option>
+            <option>Pantry</option>
+          </select>
+
+          <select class="field" aria-label="Distance">
+            <option>Within 10 km</option>
+            <option>Within 5 km</option>
+            <option>Within 25 km</option>
+          </select>
+
+          <select class="field" aria-label="Pickup time">
+            <option>Pickup: Today</option>
+            <option>Pickup: Tomorrow</option>
+            <option>Pickup: This week</option>
+          </select>
+
+          <select class="field" aria-label="Sort">
+            <option>Expiring soon</option>
+            <option>Nearest</option>
+          </select>
+        </div>
+
+        <!-- food listings: each <article> is one donation -->
+        <article class="listing">
+          <h3>Fresh fruit box</h3>
+          <p>Sunrise Grocery &middot; 245 Provencher Blvd, St. Boniface</p>
+          <p>2.1 km away &middot; 10 kg available &middot; Produce</p>
+        </article>
+
+        <article class="listing">
+          <h3>Day-old breads</h3>
+          <p>Prairie Bakery &middot; 120 Osborne St, Osborne Village</p>
+          <p>3.4 km away &middot; 15 kg available &middot; Bakery</p>
+        </article>
+
+        <article class="listing">
+          <h3>Cooked pasta trays</h3>
+          <p>Corner Caf&eacute; &middot; 88 Princess St, Exchange District</p>
+          <p>4.8 km away &middot; 6 kg available &middot; Prepared meals</p>
+        </article>
+
+        <article class="listing">
+          <h3>Canned vegetables</h3>
+          <p>Green Basket Market &middot; 650 St. Mary's Rd, St. Vital</p>
+          <p>7.2 km away &middot; 20 kg available &middot; Pantry</p>
+        </article>
+
+      </main>
+    </div>
+  </div>
+
+</body>
+</html>
